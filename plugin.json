@@ -1,0 +1,27 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "style-lock",
+  "version": "0.1.0",
+  "description": "从场景参考图提取视觉风格、变化权限和风格偏移检查标准。",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "风格锁定 · 视觉分析",
+        "shortDescription": "分析场景风格并约束变化",
+        "longDescription": "从用户提供的场景参考图提取风格身份、三层变化权限、语义替换边界和风格偏移检查，输出可复用的结构化档案。默认分别分析多张场景图，商品图只作为商品身份和外观的依据。本插件只做风格分析，不设计新场景、不编写生图提示词、不生成图片，也不验证商品像素级保真。",
+        "developerName": "本地用户",
+        "category": "Productivity",
+        "capabilities": [
+          "Visual analysis"
+        ],
+        "defaultPrompt": [
+          "分析我提供的场景参考图，提取风格特征、变化权限和风格偏移检查。",
+          "分别分析这些场景参考图，建立独立的风格档案。"
+        ],
+        "brandColor": "#285A51",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg"
+      }
+    }
+  }
+}
